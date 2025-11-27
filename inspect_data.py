@@ -2,7 +2,8 @@ import pandas as pd
 import os
 
 # Configuration
-DATA_DIR = r"c:\Users\danyw\Documents\Git\DanywayGit\CryptoLongTermTrades\data"
+# Configuration
+DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 DAILY_FILE = os.path.join(DATA_DIR, "CRYPTO_ETHUSD, 1D.csv")
 
 def inspect_dates():

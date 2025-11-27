@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 # Configuration
-DATA_DIR = r"c:\Users\danyw\Documents\Git\DanywayGit\CryptoLongTermTrades\data"
+DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 DAILY_FILE = os.path.join(DATA_DIR, "CRYPTO_ETHUSD, 1D.csv")
 WEEKLY_FILE = os.path.join(DATA_DIR, "CRYPTO_ETHUSD, 1W.csv")
 
@@ -108,7 +108,7 @@ import numpy as np
 import os
 
 # Configuration
-DATA_DIR = r"c:\Users\danyw\Documents\Git\DanywayGit\CryptoLongTermTrades\data"
+DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 DAILY_FILE = os.path.join(DATA_DIR, "CRYPTO_ETHUSD, 1D.csv")
 WEEKLY_FILE = os.path.join(DATA_DIR, "CRYPTO_ETHUSD, 1W.csv")
 
