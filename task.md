@@ -1,0 +1,43 @@
+# Task: Analyze ETH Long-Term Trading Signals
+
+- [x] Explore Data <!-- id: 0 -->
+    - [x] Read `data/CRYPTO_ETHUSD, 1D.csv` headers and sample data <!-- id: 1 -->
+    - [x] Read `data/CRYPTO_ETHUSD, 1W.csv` headers and sample data <!-- id: 2 -->
+- [x] Plan Analysis & Strategy <!-- id: 3 -->
+    - [x] Define technical indicators to calculate (RSI, Stoch, BBWP, EMA, etc.) <!-- id: 4 -->
+    - [x] Define "Extreme Low" and "Extreme High" criteria for ground truth (to validate signals) <!-- id: 5 -->
+# Task: Analyze ETH Long-Term Trading Signals
+
+- [x] Explore Data <!-- id: 0 -->
+    - [x] Read `data/CRYPTO_ETHUSD, 1D.csv` headers and sample data <!-- id: 1 -->
+    - [x] Read `data/CRYPTO_ETHUSD, 1W.csv` headers and sample data <!-- id: 2 -->
+- [x] Plan Analysis & Strategy <!-- id: 3 -->
+    - [x] Define technical indicators to calculate (RSI, Stoch, BBWP, EMA, etc.) <!-- id: 4 -->
+    - [x] Define "Extreme Low" and "Extreme High" criteria for ground truth (to validate signals) <!-- id: 5 -->
+    - [x] Design algorithm for sequential signal detection <!-- id: 6 -->
+- [x] Implement Analysis Script <!-- id: 7 -->
+    - [x] Create requirements.txt <!-- id: 11 -->
+    - [x] Create virtual environment (.venv) <!-- id: 12 -->
+    - [x] Install dependencies (pandas, matplotlib) <!-- id: 13 -->
+    - [x] Create Python script for data loading and indicator calculation <!-- id: 8 -->
+    - [x] Implement signal detection logic (sequential patterns) <!-- id: 9 -->
+    - [x] Implement visualization (Entry/Exit points) <!-- id: 10 -->
+- [x] Execute & Refine <!-- id: 11 -->
+    - [x] Run analysis on Daily and Weekly data <!-- id: 12 -->
+    - [x] Verify signals against "Extreme" columns <!-- id: 13 -->
+    - [x] Generate report with charts <!-- id: 14 -->
+- [x] Final Report & Visualization <!-- id: 15 -->
+    - [x] Generate final plots for Buy/Sell signals <!-- id: 16 -->
+    - [x] Document logic and performance of top combinations <!-- id: 17 -->
+- [x] Refine Logic & Constraints <!-- id: 18 -->
+    - [x] Create .gitignore (exclude .venv) <!-- id: 19 -->
+    - [x] Implement 25% profit constraint for sells <!-- id: 20 -->
+    - [x] Tune Daily parameters (More Buys, Less Sells) <!-- id: 21 -->
+    - [x] Tune Weekly parameters (Catch lows/tops better) <!-- id: 22 -->
+    - [x] Re-run analysis and update report <!-- id: 23 -->
+- [x] Refine Daily Signals (Specific Dates) <!-- id: 24 -->
+    - [x] Inspect data for missed Sells (Nov 2021, May 2024, Dec 2024, Aug 2025, Oct 2025) <!-- id: 25 -->
+    - [x] Inspect data for bad Buys (Nov-Dec 2021, Dec 2024-Jan 2025) <!-- id: 26 -->
+    - [x] Test "Buy below 200 EMA" hypothesis <!-- id: 27 -->
+    - [x] Adjust Sell logic (RSI threshold, profit constraint) to catch missing sells <!-- id: 28 -->
+    - [x] Re-run analysis and verify against specific dates <!-- id: 29 -->
