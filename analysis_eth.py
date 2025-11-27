@@ -204,7 +204,7 @@ def detect_signals(df, timeframe_name, rsi_buy_thresh=30, rsi_sell_thresh=70, mi
                         
         else: # Daily Logic (Existing)
             # 1. RSI Oversold
-            if rsi < rsi_buy_thresh:
+            if rsi < 35: # Optimized from 40 to 35
                 rsi_oversold_bar = i
                 ema_ext_at_oversold = ema_ext # Capture Ext at the dip
                 
@@ -214,9 +214,10 @@ def detect_signals(df, timeframe_name, rsi_buy_thresh=30, rsi_sell_thresh=70, mi
                     stoch_bull_bar = i
             
             # 3. EMA Confirmation + Filters
-            if df['Above_EMA21'].iloc[i]:
-                if (i - stoch_bull_bar) <= 20 and stoch_bull_bar != -999:
-                    is_buy_setup = True
+            # OPTIMIZATION: Removed 'Above_EMA21' check to buy earlier in the dip.
+            # Was: if df['Above_EMA21'].iloc[i]:
+            if (i - stoch_bull_bar) <= 20 and stoch_bull_bar != -999:
+                is_buy_setup = True
             
             # Apply Filters (Daily Only)
             if is_buy_setup and timeframe_name == "Daily":

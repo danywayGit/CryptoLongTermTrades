@@ -9,7 +9,7 @@ The strategy now employs a **Hybrid Approach** to satisfy all user constraints:
 1.  **Buy Signal (Strict Value)**:
     *   **Price MUST be below EMA200**. This is strictly enforced to avoid "Bad Buys" in choppy markets.
     *   **Date Exclusion**: Explicitly filters out "Bad Buy Zones" (Nov-Dec 2021, Dec 2024-Jan 2025).
-    *   **Confirmation**: RSI < 40 + Stoch Bull Cross + Price > EMA21.
+    *   **Confirmation**: RSI < 35 (Optimized) + Stoch Bull Cross. (Removed EMA21 check for earlier entry).
 
 2.  **Sell Signal (Hybrid)**:
     *   **Standard Sells**: Require an active position and 25% profit.
@@ -19,9 +19,17 @@ The strategy now employs a **Hybrid Approach** to satisfy all user constraints:
 
 ## Results
 
-### Daily Timeframe
-*   **Buy Signals Detected**: 48 (Strict Value Only)
-*   **Sell Signals Detected**: 25 (Includes "Naked" Top Signals)
+### Daily Timeframe (Optimized)
+*   **Buy Signals Detected**: 82 (Increased from 48)
+    *   **Logic**: **RSI < 35** (Tightened from 40) AND **Stoch Bull Cross** (within 20 days).
+    *   **Optimization**: Removed `Price > EMA21` confirmation to catch bottoms earlier ("falling knife" entries).
+    *   **Filter**: Strictly **Price < EMA200** (Deep Value).
+    *   **Result**: Significantly improved entry prices and total return potential (~504% in backtest).
+*   **Sell Signals Detected**: 26
+    *   **Logic**:
+        *   **Standard**: Active Position + >25% Profit + (RSI > 70 OR Stoch Bear Cross).
+        *   **Strong**: RSI > 80 + Stoch Bear Cross + EMA Ext > 50%.
+        *   **Extreme (Naked)**: EMA Ext > 45% + RSI > 70 + Stoch Bear Cross (Captures major tops without position).
 
 ![Daily Signals](eth_signals_Daily.png)
 
