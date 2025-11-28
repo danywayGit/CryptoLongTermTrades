@@ -23,6 +23,11 @@ This project is focused on analyzing long-term cryptocurrency trades, specifical
 *   `inspect_data.py`: Utility to inspect data files.
 *   `data/`: Directory containing input data (CSV, JSON, etc.).
 
+## Path Handling
+*   **Always use relative paths** instead of absolute paths for portability across different systems.
+*   Use `os.path.join(os.path.dirname(__file__), "data")` to reference the data directory.
+*   Never hardcode user-specific paths (e.g., `C:\Users\username\...`).
+
 ## Style & Best Practices
 *   Follow PEP 8 guidelines for Python code.
 *   Ensure plots and charts are saved with descriptive names (e.g., `eth_signals_Daily.png`).
