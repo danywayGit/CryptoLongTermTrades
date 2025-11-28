@@ -33,11 +33,11 @@
     - [x] Create .gitignore (exclude .venv) <!-- id: 19 -->
     - [x] Implement 25% profit constraint for sells <!-- id: 20 -->
     - [x] Tune Daily parameters (More Buys, Less Sells) <!-- id: 21 -->
-    - [x] Tune Weekly parameters (Catch lows/tops better) <!-- id: 22 -->
+    - [x] Tune Weekly parameters (Catch lows/tops better) - Implemented Stoch(18) < 9 logic <!-- id: 22 -->
     - [x] Re-run analysis and update report <!-- id: 23 -->
 - [x] Refine Daily Signals (Specific Dates) <!-- id: 24 -->
     - [x] Inspect data for missed Sells (Nov 2021, May 2024, Dec 2024, Aug 2025, Oct 2025) <!-- id: 25 -->
     - [x] Inspect data for bad Buys (Nov-Dec 2021, Dec 2024-Jan 2025) <!-- id: 26 -->
-    - [x] Test "Buy below 200 EMA" hypothesis <!-- id: 27 -->
-    - [x] Adjust Sell logic (RSI threshold, profit constraint) to catch missing sells <!-- id: 28 -->
+    - [x] Test "Buy below 200 EMA" hypothesis (Strictly enforced per user request) <!-- id: 27 -->
+    - [x] Adjust Sell logic (RSI threshold, profit constraint) to catch missing sells (Implemented "Naked" Extreme Sells) <!-- id: 28 -->
     - [x] Re-run analysis and verify against specific dates <!-- id: 29 -->
