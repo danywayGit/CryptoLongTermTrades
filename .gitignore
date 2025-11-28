@@ -1,2 +1,10 @@
 .venv/
 __pycache__/
+
+# Temporary output files
+*.txt
+!requirements.txt
+!copilot.instruction.md
+
+# Generated charts (optional - comment out if you want to track them)
+# *.png
